@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import chalk from "chalk";
 import readline from "readline";
 // Developer Information
@@ -66,9 +67,12 @@ const main = async () => {
         const myName = await askQuestion(chalk.bold.greenBright("What is your name? "));
         let myStudent = new Student(); // create a new student object
         myStudent.name = myName; // Set the student's name
-        const answer = await askQuestion(chalk.bold.greenBright(chalk.bold.yellowBright("Type 1: ") + "If you like to talk to others?\n" +
-            chalk.bold.yellowBright("Type 2: ") + "If you would rather keep to yourself?\n" +
-            chalk.bold.yellowBright("Type 3: ") + "If you enjoy a balance of both?\n" +
+        const answer = await askQuestion(chalk.bold.greenBright(chalk.bold.yellowBright("Type 1: ") +
+            "If you like to talk to others?\n" +
+            chalk.bold.yellowBright("Type 2: ") +
+            "If you would rather keep to yourself?\n" +
+            chalk.bold.yellowBright("Type 3: ") +
+            "If you enjoy a balance of both?\n" +
             "Your choice: "));
         // Validate input and assign personality
         const answerNum = parseInt(answer);
